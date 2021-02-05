@@ -1,13 +1,20 @@
 import adwords from '../../assets/adwords.png'
 import { Navbar, Nav } from 'react-bootstrap'
-import { profileuser } from './LoginPage'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 const Header = () => {
+  const [data, setData] = useState('')
   const style = {
     textDecoration: 'none',
   }
+  const getData = () => {
+    let cdata = localStorage.getItem('myData')
+    setData(cdata)
+  }
 
-  const [profile, setProfile] = useState('dhanush')
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <div className='header'>
@@ -22,7 +29,7 @@ const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
             <Nav.Link className='item' href='#home'>
-              {profile}
+              {data}
             </Nav.Link>
             <Nav.Link className='item' href='#home'>
               Subscrie

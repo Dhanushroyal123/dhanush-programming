@@ -24,6 +24,10 @@ const LoginForm = () => {
     setShow(false)
   }
 
+  const setData = (username) => {
+    localStorage.setItem('myData', username)
+  }
+
   const check = (e) => {
     if (e.target.checked) {
       setType('text')
@@ -38,7 +42,7 @@ const LoginForm = () => {
       .post('https://dhanush-test-app.herokuapp.com/user/validate', user)
       .then((res) => {
         if (res.data.value < 300) {
-          profileuser = res.data.username
+          setData(res.data.username)
           history.push('/courses')
         } else {
           setShow(true)
