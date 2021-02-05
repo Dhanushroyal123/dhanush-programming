@@ -1,17 +1,5 @@
-import { cleanup } from '@testing-library/react'
-import { useState, useEffect } from 'react'
 import adwords from '../../assets/adwords.png'
-import {
-  Navbar,
-  Button,
-  Form,
-  FormControl,
-  Nav,
-  NavDropdown,
-  Row,
-  Col,
-} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Navbar, Nav } from 'react-bootstrap'
 
 const Header = () => {
   const style = {

@@ -1,8 +1,4 @@
-import { renderIntoDocument } from 'react-dom/test-utils'
-import allaccess from '../../assets/allaccess.jpg'
-import { Form, Row, Col } from 'react-bootstrap'
 import { data } from './data'
-import React, { useState, useEffect } from 'react'
 
 const Coursebody = () => {
   return (
