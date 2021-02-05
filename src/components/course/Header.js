@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     getData()
-  }, [])
+  })
 
   return (
     <div className='header'>
