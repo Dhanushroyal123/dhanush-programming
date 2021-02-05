@@ -1,6 +1,8 @@
 import { data } from './data'
+import { useEffect } from 'react'
 
 const Coursebody = () => {
+  useEffect(() => {}, [])
   return (
     <>
       <div className='course-body'>
