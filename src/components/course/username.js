@@ -1,1 +1,1 @@
-export default { username: '' }
+export var username = ''
