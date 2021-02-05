@@ -11,14 +11,10 @@ const Header = () => {
     let cdata = localStorage.getItem('myData')
     setData(cdata)
   }
-  function refresh() {
-    setTimeout(function () {
-      location.reload()
-    }, 100)
-  }
+
   useEffect(() => {
     getData()
-    refresh()
+    document.location.reload(true)
   }, [])
 
   return (
