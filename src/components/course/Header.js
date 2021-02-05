@@ -7,7 +7,7 @@ const Header = () => {
     textDecoration: 'none',
   }
 
-  const [profile, setProfile] = useState(profileuser)
+  const [profile, setProfile] = useState('dhanush')
 
   return (
     <div className='header'>
