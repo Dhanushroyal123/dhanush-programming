@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     getData()
-    location.reload()
+    document.location.reload()
   }, [])
 
   return (
