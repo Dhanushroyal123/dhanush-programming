@@ -2,7 +2,7 @@ import { Form, Button } from 'react-bootstrap'
 import { useState } from 'react'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-import { username } from './username'
+import { global } from 'global'
 
 const LoginForm = () => {
   let history = useHistory()
@@ -38,7 +38,7 @@ const LoginForm = () => {
       .post('https://dhanush-test-app.herokuapp.com/user/validate', user)
       .then((res) => {
         if (res.data.value < 300) {
-          username = res.data.username
+          global.username = res.data.username
           history.push('/courses')
         } else {
           setShow(true)

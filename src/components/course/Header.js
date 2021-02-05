@@ -1,6 +1,6 @@
 import adwords from '../../assets/adwords.png'
 import { Navbar, Nav } from 'react-bootstrap'
-import { username } from './username'
+import { global } from 'global'
 const Header = () => {
   const style = {
     textDecoration: 'none',
@@ -18,7 +18,7 @@ const Header = () => {
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
             <Nav.Link className='item' href='#home'>
-              {username}
+              {global.username}
             </Nav.Link>
             <Nav.Link className='item' href='#home'>
               Subscrie
