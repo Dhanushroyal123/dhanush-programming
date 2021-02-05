@@ -1,6 +1,6 @@
 import adwords from '../../assets/adwords.png'
 import { Navbar, Nav } from 'react-bootstrap'
-import { username } from './username'
+import { profileuser } from './LoginPage'
 const Header = () => {
   const style = {
     textDecoration: 'none',
