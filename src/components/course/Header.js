@@ -10,7 +10,6 @@ const Header = () => {
   const getData = () => {
     let cdata = localStorage.getItem('myData')
     setData(cdata)
-    document.location.reload()
   }
 
   useEffect(() => {
