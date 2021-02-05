@@ -1,6 +1,6 @@
 import adwords from '../../assets/adwords.png'
 import { Navbar, Nav } from 'react-bootstrap'
-
+import { username } from './username'
 const Header = () => {
   const style = {
     textDecoration: 'none',
@@ -17,6 +17,9 @@ const Header = () => {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='mr-auto'>
+            <Nav.Link className='item' href='#home'>
+              {username}
+            </Nav.Link>
             <Nav.Link className='item' href='#home'>
               Subscrie
             </Nav.Link>
