@@ -38,7 +38,8 @@ const LoginForm = () => {
       .post('https://dhanush-test-app.herokuapp.com/user/validate', user)
       .then((res) => {
         if (res.data.value < 300) {
-          username = 
+          username = res.data.username
+          history.push('/courses')
         } else {
           setShow(true)
         }
