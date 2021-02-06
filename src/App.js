@@ -10,22 +10,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import SignUp from './components/course/signup'
 
 function App() {
-  useEffect(() => {
-    window.onload = function () {
-      if (!window.location.hash) {
-        window.location = window.location + '#loaded'
-        window.location.reload()
-      }
-    }
-  }, [])
   return (
     <Router>
       <div className='container-fluidd'>
+        <Header />
         <Switch>
-          <Route path='/'>
-            <Header />
-          </Route>
-          <Route path='/courses'>
+          <Route path={['/', '/courses']}>
             <Coursebody />
           </Route>
           <Route path='/login'>
