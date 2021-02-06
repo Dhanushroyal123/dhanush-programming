@@ -13,12 +13,11 @@ function App() {
   return (
     <Router>
       <div className='container-fluidd'>
-        <Header />
         <Switch>
           <Route exact path='/'>
-            <Coursebody />
+            <Header />
           </Route>
-          <Route path='/courses'>
+          <Route exact path='/'>
             <Coursebody />
           </Route>
           <Route path='/login'>
