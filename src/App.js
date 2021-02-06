@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className='container-fluidd'>
         <Switch>
-          <Route exact path={['/courses']}>
+          <Route path={['/courses']}>
             <Header />
             <Coursebody />
           </Route>
