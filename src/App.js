@@ -10,6 +10,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import SignUp from './components/course/signup'
 
 function App() {
+  useEffect(() => {
+    window.onload = function () {
+      if (!window.location.hash) {
+        window.location = window.location + '#loaded'
+        window.location.reload()
+      }
+    }
+  }, [])
   return (
     <Router>
       <div className='container-fluidd'>
