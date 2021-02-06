@@ -43,7 +43,7 @@ const LoginForm = () => {
       .then((res) => {
         if (res.data.value < 300) {
           setData(res.data.username)
-          history.push('/')
+          history.push('/courses')
         } else {
           setShow(true)
         }
